@@ -1,13 +1,18 @@
 .app-wrapper {
+  margin: 0 auto;
+  width: 1200px;
   display: grid;
 
   grid-template-areas:
-  "header-area header-area"
-  "nav-area content-area";
+          "header-area header-area"
+          "nav-area content-area";
 
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
 
 }
 
-
+.app-wrapper {
+  grid-area: content-area;
+  background-color: lightblue;
+}
