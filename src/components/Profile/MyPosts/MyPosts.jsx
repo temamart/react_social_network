@@ -4,16 +4,22 @@ import s from './MyPosts.module.css'
 
 const MyPosts = () => {
     return (
-        <div>
-            My posts
+        <div className={s.postsBlock}>
+            <h3>My posts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
-                <button>Remove</button>
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                    <button>Remove</button>
+                </div>
             </div>
-            <Post/>
-            <Post/>
-            <Post/>
+            <div className={s.posts}>
+                <Post message="Post 1"/>
+                <Post message="Post 2"/>
+                <Post message="Post 4"/>
+            </div>
         </div>
     )
 };
