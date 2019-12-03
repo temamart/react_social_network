@@ -7,14 +7,15 @@ import './App.css';
 import Dialogs from "./components/Dialogs/Dialogs";
 
 const App = (props) => {
+
     return (
         <Router>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route exact path='/dialogs' component={Dialogs}/>
-                    <Route exact path='/profile' component={Profile}/>
+                    <Route exact path='/dialogs' render={()=><Dialogs dialogs={props.dialogs} messages={props.messages}/>}/>
+                    <Route exact path='/profile' render={()=><Profile posts={props.posts}/>} />
                 </div>
             </div>
         </Router>

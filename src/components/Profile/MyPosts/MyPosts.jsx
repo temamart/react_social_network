@@ -2,15 +2,9 @@ import React from 'react'
 import Post from "./Post/Post";
 import s from './MyPosts.module.css'
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
-    let posts = [
-        {id: 1, message: 'Post 1'},
-        {id: 2, message: 'Post 2'},
-        {id: 3, message: 'Post 3'},
-    ];
-
-    let pastElements = posts.map(
+    let pastElements = props.posts.map(
         post => <Post message={post.message}/>
     );
 
